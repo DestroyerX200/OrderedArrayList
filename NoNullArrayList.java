@@ -1,3 +1,3 @@
-public class NoNullArrayList {
+public class NoNullArrayList<T> extends ArrayList<T> {
 	
 }

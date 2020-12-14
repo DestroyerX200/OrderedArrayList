@@ -11,8 +11,7 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 		if (value == null) {
 			throw new IllegalArgumentException("null is not a valid value");
 		}
-		super.add(value);
-	return true;
+		return super.add(value);
 	}
 	public void add(int index, T value) {
 		if (value == null) {
@@ -24,7 +23,6 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 		if (value == null) {
 			throw new IllegalArgumentException("null is not a valid value");
 		}
-		super.set(index, value);
-		return value;
+		return super.set(index, value);
 	}
 }

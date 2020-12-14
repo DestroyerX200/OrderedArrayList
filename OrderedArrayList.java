@@ -7,4 +7,11 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 		}
 		return size();
 	}
+	public boolean add(T value) {
+		super.add(orderedIndexOf(value), value);
+		return true;
+	}
+	public void add(int index, T value) {
+		add(value);
+	}
 }

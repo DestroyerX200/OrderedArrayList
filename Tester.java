@@ -1,6 +1,6 @@
 public class Tester {
 	public static void main(String[] args) {
-		NoNullArrayList<String> a = new NoNullArrayList<String>();
+		NoNullArrayList<String> a = new NoNullArrayList<String>(5);
 		System.out.println(a.add("woah"));
 		try {
 			System.out.println("method call: a.add(null)");
@@ -39,9 +39,12 @@ public class Tester {
 		// System.out.println("method call: orderedA.orderedIndexOf(12) [should return 6]");
 		// System.out.println(orderedA.orderedIndexOf(12));
 
-		OrderedArrayList<Integer> orderedB = new OrderedArrayList<Integer>();
+		OrderedArrayList<Integer> orderedB = new OrderedArrayList<Integer>(2);
 		orderedB.add(16); orderedB.add(32); orderedB.add(5, 4); orderedB.add(8);
 		orderedB.add(64); orderedB.add(1, 2); orderedB.add(1); orderedB.add(128);
+		System.out.println(orderedB);
+		System.out.println("method call: orderedB.set(5, 125)");
+		System.out.println(orderedB.set(5, 125));
 		System.out.println(orderedB);
 
 	} 

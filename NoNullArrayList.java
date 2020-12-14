@@ -11,13 +11,20 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 		if (value == null) {
 			throw new IllegalArgumentException("null is not a valid value");
 		}
-	super.add(value);
+		super.add(value);
 	return true;
 	}
-	public void add(int index, T element) {
-		if (element == null) {
+	public void add(int index, T value) {
+		if (value == null) {
 			throw new IllegalArgumentException("null is not a valid value");
 		}
-		super.add(index, element);
+		super.add(index, value);
+	}
+	public T set(int index, T value) {
+		if (value == null) {
+			throw new IllegalArgumentException("null is not a valid value");
+		}
+		super.set(index, value);
+		return value;
 	}
 }

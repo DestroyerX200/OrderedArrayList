@@ -30,5 +30,11 @@ public class Tester {
 		catch (IllegalArgumentException e) {
 			System.out.println("IllegalArgumentException caught");
 		}
+		OrderedArrayList<Integer> orderedA = new OrderedArrayList<Integer>();
+		orderedA.add(1); orderedA.add(1); orderedA.add(2); orderedA.add(3);
+		orderedA.add(5); orderedA.add(8); orderedA.add(13); orderedA.add(21);
+		System.out.println(orderedA);
+		System.out.println("method call: orderedA.orderedIndexOf(12) [should return 6]");
+		System.out.println(orderedA.orderedIndexOf(12));
 	} 
 }

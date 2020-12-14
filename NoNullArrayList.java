@@ -14,4 +14,10 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 	super.add(value);
 	return true;
 	}
+	public void add(int index, T element) {
+		if (element == null) {
+			throw new IllegalArgumentException("null is not a valid value");
+		}
+		super.add(index, element);
+	}
 }
